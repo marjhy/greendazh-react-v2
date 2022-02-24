@@ -54,6 +54,8 @@ import WeeklyHistoryStr from './Str/WeeklyHistory';
 import DetailDataStr from './Str/DetailData';
 import OperationalTimeStr from './Str/OperationalTime';
 import ParetoDowntimeStr from './Str/ParetoDowntime';
+import LossMStr from './Str/LossM';
+import LossWStr from './Str/LossW';
 // RTD
 import RealtimeDailyRtd from './Rtd/RealtimeDaily';
 import MonthlyOEERtd from './Rtd/MonthlyOEE';
@@ -144,6 +146,8 @@ const App = () => {
         />
         <Route exact path='/LossM' render={(props) => <LossM {...props} />} />
         <Route exact path='/LossW' render={(props) => <LossW {...props} />} />
+        <Route exact path='/LossMStr' render={(props) => <LossMStr {...props} />} />
+        <Route exact path='/LossWStr' render={(props) => <LossWStr {...props} />} />
         <Route
           exact
           path='/RealtimeDailyPrcs'

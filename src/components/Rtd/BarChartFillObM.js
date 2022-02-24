@@ -57,8 +57,8 @@ const BarChartFillObM = () => {
               borderWidth: 2,
               datalabels: {
                 backgroundColor: 'white',
-                align: 'start',
-                // display: true,
+                align: 'end',
+                display: true,
               },
             },
             {
@@ -69,7 +69,7 @@ const BarChartFillObM = () => {
               datalabels: {
                 // backgroundColor: 'white',
                 // align: 'center',
-                display: false,
+                display: true,
               },
             },
             {
@@ -80,7 +80,7 @@ const BarChartFillObM = () => {
               datalabels: {
                 // backgroundColor: 'white',
                 // align: 'center',
-                display: false,
+                display: true,
               },
             },
             {
@@ -91,7 +91,7 @@ const BarChartFillObM = () => {
               datalabels: {
                 // backgroundColor: 'white',
                 // align: 'center',
-                display: false,
+                display: true,
               },
             },
             {
@@ -101,7 +101,7 @@ const BarChartFillObM = () => {
               backgroundColor: '#76ff03',
               datalabels: {
                 // backgroundColor: 'white',
-                // align: 'center',
+                align: 'center',
                 display: false,
               },
             },
@@ -111,9 +111,9 @@ const BarChartFillObM = () => {
               fill: false,
               backgroundColor: '#00e676',
               datalabels: {
-                // backgroundColor: 'white',
+                // backgroundColor: 'black',
                 // align: 'center',
-                display: false,
+                display: true,
               },
             },
             {
@@ -122,9 +122,9 @@ const BarChartFillObM = () => {
               fill: false,
               backgroundColor: '#009688',
               datalabels: {
-                // backgroundColor: 'white',
-                // align: 'center',
-                display: false,
+                backgroundColor: 'white',
+                align: 'end',
+                display: true,
               },
             },
           ],

@@ -97,7 +97,7 @@ const BarChartFillObM = () => {
               },
             },
             {
-              label: 'Sample',
+              label: 'Sample QC',
               data: Sample,
               fill: false,
               backgroundColor: 'rgb(255, 99, 132)',
@@ -119,7 +119,7 @@ const BarChartFillObM = () => {
               },
             },
             {
-              label: 'Pengecekan',
+              label: 'Sample Production',
               data: Pengecekan,
               fill: false,
               backgroundColor: 'rgb(75, 192, 192)',

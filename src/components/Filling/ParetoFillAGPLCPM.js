@@ -59,7 +59,7 @@ const ParetoFillAGPLCPM = () => {
   const handleChange = (event) => {
     setMOnth(event.target.value);
     if (event.target.value === 1) {
-      setTitle('Pareto Line B Downtime All / Month January '+ value);
+      setTitle('Pareto Line C Downtime All / Month January '+ value);
     }
     if (event.target.value === 2) {
       setTitle('Pareto Line C Downtime All / Month February '+ value);

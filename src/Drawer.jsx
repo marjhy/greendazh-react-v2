@@ -916,6 +916,36 @@ const Drawer = (props) => {
               </ListItem>
             </List>
           </Collapse>
+          
+          <Collapse in={openLink2} timeout='auto' unmountOnExit>
+            <List component='div' disablePadding>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => history.push('/LossMStr')}
+              >
+                <ListItemIcon>
+                  <DeleteIcon />
+                </ListItemIcon>
+                <ListItemText primary='LossPackaging Monthly' />
+              </ListItem>
+            </List>
+          </Collapse>
+          <Collapse in={openLink2} timeout='auto' unmountOnExit>
+            <List component='div' disablePadding>
+              <ListItem
+                button
+                className={classes.nested}
+                onClick={() => history.push('/LossWStr')}
+              >
+                <ListItemIcon>
+                  <DeleteOutlineIcon />
+                </ListItemIcon>
+                <ListItemText primary='LossPackaging Weekly' />
+              </ListItem>
+            </List>
+          </Collapse>
+
         </List>
         {/* STR
          *END OF STR

@@ -17,7 +17,7 @@ const BarChartFillObM = () => {
   let CURRENT_YEAR = new Date().getFullYear();
   const [value, setValue] = useState(CURRENT_YEAR);
   const [title, setTitle] = useState(
-    'LOSS PACKAGING ESL PACK 1000 ML BY MONTH ' + value
+    'LOSS PACKAGING GF YOGURT 1000GR BY MONTH ' + value
   );
 
   // LINE CHART OEE FILLING LINE B
@@ -33,17 +33,16 @@ const BarChartFillObM = () => {
     let fs = [];
 
     axios
-      .get(`http://10.24.7.70:8080/LossOeeFillM/${value}`)
+      .get(`http://10.24.7.70:8080/LossOeeStrM/${value}`)
       .then((res) => {
         for (const dataObj2 of res.data) {
-          if (dataObj2['MATERIAL GROUP'] === 'ESL PACK 1000 ML') {
-            Sample.push(parseFloat([dataObj2['INC-SMPLE-PCS']].join(',')));
-            StartUp.push(parseFloat([dataObj2['STARTUP']].join(',')));
-            Pengecekan.push(parseFloat([dataObj2['PENGECEKAN']].join(',')));
-            VariableLoss.push(parseFloat([dataObj2['VARIABLELOSS']].join(',')));
+          if (dataObj2['MATERIAL GROUP'] === 'GF YOGURT 1000GR') {
             PackagingLoss.push(parseFloat([dataObj2['PACKAGINGLOSS']].join(',')));
             FixLoss.push(parseFloat([dataObj2['FIXLOSS']].join(',')));
             Standart.push(parseFloat([dataObj2['STD']].join(',')));
+            Sample.push(parseFloat([dataObj2['SAMPLEUSED']].join(',')));
+            StartUp.push(parseFloat([dataObj2['STARTUP']].join(',')));
+            VariableLoss.push(parseFloat([dataObj2['VARIABLELOSS']].join(',')));  
             fs.push(dataObj2.MONTHs);
           }          
         }
@@ -117,18 +116,7 @@ const BarChartFillObM = () => {
                 // align: 'center',
                 display: false,
               },
-            },
-            {
-              label: 'Sample Production',
-              data: Pengecekan,
-              fill: false,
-              backgroundColor: 'rgb(75, 192, 192)',
-              datalabels: {
-                // backgroundColor: 'white',
-                // align: 'center',
-                display: false,
-              },
-            },
+            },     
             {
               label: 'VariableLoss',
               data: VariableLoss,
@@ -217,7 +205,7 @@ const BarChartFillObM = () => {
               if (value > max) value = max;
               if (value < min) value = min;
               setValue(value);
-              setTitle('LOSS PACKAGING ESL PACK 1000 ML BY MONTH ' + value);
+              setTitle('LOSS PACKAGING GF YOGURT 1000GR BY MONTH ' + value);
             }}
             variant="outlined"
           /><br/>     
